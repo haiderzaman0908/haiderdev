@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  /* Dark theme (default) */
+  --bg: #16191f;
+  --surface: #101010;
+  --surface-2: #181818;
+  --border: #2A2A2A;
+  --text: #FFFFFF;
+  --text-muted: #9A9A9A;
+  --accent: #D62E00;
+  --accent-2: #FF5A2B;
+  --success: #3DDC97;
+  --shadow: rgba(0, 0, 0, 0.6);
+}
+
+html[data-theme='light'] {
+  --bg: #FFFFFF;
+  --surface: #F7F7F7;
+  --surface-2: #EFEFEF;
+  --border: #E2E2E2;
+  --text: #0A0A0A;
+  --text-muted: #6B6B6B;
+  --accent: #D62E00;
+  --accent-2: #FF5A2B;
+  --shadow: rgba(20, 20, 20, 0.10);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bg text-text font-body;
+  transition: background 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display tracking-tight leading-tight;
+}
+
+::selection {
+  background: var(--accent);
+  color: #08101F;
+}
+
+@layer components {
+  .container-app {
+    @apply max-w-container mx-auto px-6;
+  }
+
+  .section-pad {
+    @apply py-16 md:py-24 lg:py-28;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs text-accent uppercase tracking-widest inline-flex items-center gap-2 mb-3;
+  }
+
+  
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-semibold mb-3;
+  }
+
+  .section-sub {
+    @apply text-muted max-w-lg mb-12 leading-relaxed;
+  }
+
+  .btn {
+    @apply inline-flex items-center gap-2 px-7 py-3 rounded-sm font-semibold text-sm transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-accent-grad text-[#08101F] hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-8px_rgba(79,209,255,0.5)];
+  }
+
+  .btn-outline {
+    @apply border border-border text-text hover:border-accent hover:text-accent;
+  }
+}
+
+/* Skills marquee */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 28s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Progress bar shimmer */
+.shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: shimmer-slide 2.2s ease-in-out infinite;
+}
+
+@keyframes shimmer-slide {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #73747b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff4b1f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  
+   background: #DB2E03;
+}
