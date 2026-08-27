@@ -30,6 +30,13 @@ const SOCIALS = [
   },
 ]
 
+// Backend base URL.
+// - Local dev: leave VITE_API_URL unset so requests go to the Vite proxy
+//   (vite.config.js proxies /api -> http://localhost:5000).
+// - Production: set VITE_API_URL in your CLIENT Vercel project to the
+//   deployed backend URL, e.g. https://your-backend-project.vercel.app
+const API_URL = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '')
+
 export default function Contact() {
   const ref = useRef(null)
 
@@ -105,7 +112,7 @@ export default function Contact() {
 
     try {
       const response = await fetch(
-        '/api/contact',
+        `${API_URL}/api/contact`,
         {
           method: 'POST',
 
