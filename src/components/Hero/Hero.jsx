@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import AnimatedText from '../AnimatedText/AnimatedText.jsx'
 import PdfModal from '../PdfModal/PdfModal.jsx'
 import resumePdf from '../../images/M.Haider Zaman Resume.pdf'
+import profileImg from '../../../images/myimg.jpg'
 
 const SOCIALS = [
   { label: 'GitHub', href: 'https://github.com/haiderzaman0908', icon: <FiGithub /> },
@@ -109,7 +110,7 @@ export default function Hero() {
   {/* Image */}
   <div className="relative w-full h-full rounded-2xl overflow-hidden bg-black">
     <img
-      src="/images/myimg.jpg"
+      src={profileImg}
       alt="Profile"
       className="w-full h-full object-cover rounded-2xl
                  transition-all duration-500 ease-out
