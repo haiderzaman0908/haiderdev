@@ -81,7 +81,7 @@ export default function Navbar() {
 
         {/* Right side actions */}
         <div className="flex items-center gap-3.5">
-          <ThemeToggle />
+          
 
 
           <a href="#contact" className="btn btn-primary hidden md:inline-flex">
