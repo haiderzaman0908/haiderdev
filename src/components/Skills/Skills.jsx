@@ -13,6 +13,8 @@ import {
   SiWordpress,
   SiShopify,
   SiFigma,
+  SiGraphUpArrow,
+  
 } from 'react-icons/si'
 
 const CATEGORIES = ['All', 'Frontend', 'Backend', 'CMS & E-commerce', 'Design']
@@ -29,6 +31,7 @@ const SKILLS = [
   { name: 'WordPress', level: 90, category: 'CMS & E-commerce', icon: SiWordpress, color: '#5EA8CC' },
   { name: 'Shopify', level: 78, category: 'CMS & E-commerce', icon: SiShopify, color: '#95BF47' },
   { name: 'UI/UX Design', level: 72, category: 'Design', icon: SiFigma, color: '#F24E1E' },
+  { name: 'SEO', level: 100, category: 'Design', icon: SiGraphUpArrow, color: '#F24E1E' },
 ]
 
 /* Smooth count-up percentage that starts when scrolled into view */
