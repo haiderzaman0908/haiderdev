@@ -4,7 +4,7 @@ import { gsap } from '../../hooks/useScrollAnimation.js'
 import { motion } from "framer-motion";
 import AnimatedText from '../AnimatedText/AnimatedText.jsx'
 import PdfModal from '../PdfModal/PdfModal.jsx'
-import resumePdf from '../../images/M.Haider Zaman Resume.pdf'
+import resumePdf from '../../images/M Haider Zaman Resume.pdf'
 import profileImg from '../../../images/myimg.jpg'
 
 const SOCIALS = [
