@@ -159,3 +159,40 @@ textarea:focus-visible {
   
    background: #DB2E03;
 }
+
+.certificates-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 10px 0 25px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.certificates-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.certificates-slide {
+  flex: 0 0 calc((100% - 40px) / 3);
+  scroll-snap-align: start;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .certificates-slide {
+    flex: 0 0 calc((100% - 20px) / 2);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .certificates-slide {
+    flex: 0 0 85%;
+  }
+}
