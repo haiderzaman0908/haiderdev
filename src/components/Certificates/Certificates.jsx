@@ -13,6 +13,12 @@ import cssPdf from '../../images/CSS_Essentials_certificate.pdf'
 import wpPdf from '../../images/WordPress_Certificate.pdf'
 import daPdf from '../../images/Data Analytics and bussiness intelligence certificate.pdf'
 import dsPdf from '../../images/Certificate_MUHAMMAD HAIDER ZAMAN_20260410.pdf'
+import ftPdf from '../../images/Introduction to Front-End Developer Coursera.pdf'
+import seoPdf from '../../images/SEO Certificate.pdf'
+import w1Pdf from '../../images/Wordpress 101 packt.pdf'
+import w2Pdf from '../../images/Wordpress_coursera.pdf'
+import bdPdf from '../../images/backend dev.pdf'
+
 
 const certificates = [
   { title: 'C++ Essentials 1', issuer: 'Cisco Networking Academy', date: 'Jun 2025', pdf: cppPdf },
@@ -23,6 +29,11 @@ const certificates = [
   { title: 'WordPress Training', issuer: 'DigiSkills.pk', date: 'Mar 2026', pdf: wpPdf },
   { title: 'Data Analytics & Business Intelligence', issuer: 'DigiSkills.pk', date: 'Mar 2026', pdf: daPdf },
   { title: 'DigiSkills Certificate', issuer: 'DigiSkills.pk', date: 'Apr 2026', pdf: dsPdf },
+  { title: 'Backend Development and API Creation', issuer: 'Packt', date: 'Oct 2026', pdf: bdPdf },
+  { title: 'Meta Front-End Developer', issuer: 'Meta', date: 'Sep 2026', pdf: ftPdf },
+  { title: 'Increase SEO Traffic with WordPress', issuer: 'Coursera', date: 'Sep 2026', pdf: seoPdf },
+  { title: 'Build a Full Website using WordPress', issuer: 'Coursera', date: 'Sep 2026', pdf: w1Pdf },
+  { title: 'WordPress 101 - The Complete Guide', issuer: 'Packt', date: 'Sep 2026', pdf: w2Pdf },
 ]
 
 export default function Certificates() {
