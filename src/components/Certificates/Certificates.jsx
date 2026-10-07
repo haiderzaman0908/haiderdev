@@ -92,4 +92,4 @@ export default function Certificates() {
       />
     </section>
   )
-}make it slider that scrol horizontally
+}
