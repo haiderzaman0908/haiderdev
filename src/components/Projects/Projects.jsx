@@ -4,10 +4,10 @@ import ProjectCard from './ProjectCard.jsx'
 
 const projects = [
   {
-    name: 'Libaasline',
+    name: 'American Fussion',
     tag: 'eCommerce · WordPress',
     desc: 'Fully functional eCommerce store with responsive design, product management and a user-friendly shopping interface.',
-    url: 'https://libaasline.com/',
+    url: 'https://americanfusionstore.com/',
   },
   {
     name: 'British International School',
@@ -38,6 +38,30 @@ const projects = [
     tag: 'Corporate · WordPress',
     desc: 'Professional business website with a clean layout built to enhance client engagement.',
     url: 'https://edlink.com.au/',
+  },
+  {
+    name: 'Linkim Clone',
+    tag: 'MERN Stack',
+    desc: 'Professional Clone website with a clean layout . It is only for my practice',
+    url: 'https://link-im.netlify.app/',
+  },
+  {
+    name: 'Cyberify Clone',
+    tag: 'MERN sTACK',
+    desc: 'Professional Clone website with a clean layout . It is only for my practice',
+    url: 'https://cyberify.netlify.app/',
+  },
+  {
+    name: 'Fresh Lay Clone',
+    tag: 'MERN sTACK',
+    desc: 'Professional Clone website with a clean layout . It is only for my practice',
+    url: 'https://freshlayclone.netlify.app/',
+  },
+   {
+    name: 'Yash Clone',
+    tag: 'MERN sTACK',
+    desc: 'Professional Clone website with a clean layout . It is only for my practice',
+    url: 'https://yashclone.netlify.app/',
   },
 ]
 
