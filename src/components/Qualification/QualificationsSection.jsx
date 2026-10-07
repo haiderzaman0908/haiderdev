@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 
 const qualificationsData = [
   {
-    id: 'matric',
+    id: 'bs-cs',
     side: 'right',
-    title: 'Computer Science (Matric)',
-    date: 'Govt. Islamia High School, Doulat Gate – Multan',
-    desc: 'August 2020 to August 2022',
+    title: 'BS Computer Science',
+    date: 'Virtual University of Pakistan – Multan · March 2024 to Present',
+    desc: 'Pursuing a Bachelor of Science in Computer Science, building a strong foundation in programming and computer systems.',
   },
   {
     id: 'ics',
@@ -15,12 +15,13 @@ const qualificationsData = [
     date: 'Govt. Willayat Hussain College, Masoom Shah Road – Multan',
     desc: 'October 2022 to October 2024',
   },
-  {
-    id: 'bs-cs',
+
+   {
+    id: 'matric',
     side: 'right',
-    title: 'BS Computer Science',
-    date: 'Virtual University of Pakistan – Multan · March 2025 to Present',
-    desc: 'Pursuing a Bachelor of Science in Computer Science, building a strong foundation in programming and computer systems.',
+    title: 'Computer Science (Matric)',
+    date: 'Govt. Islamia High School, Doulat Gate – Multan',
+    desc: 'August 2020 to August 2022',
   },
   {
     id: 'wordpress',
