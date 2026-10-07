@@ -10,7 +10,7 @@ import {
 } from 'react-icons/fi'
 import { gsap } from '../../hooks/useScrollAnimation.js'
 import AnimatedText from '../AnimatedText/AnimatedText.jsx'
-import resumePdf from '../../images/M.Haider Zaman Resume.pdf'
+import resumePdf from '../../images/M Haider Zaman Resume.pdf'
 
 const SOCIALS = [
   {
