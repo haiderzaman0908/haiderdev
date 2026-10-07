@@ -72,7 +72,7 @@ export default function Certificates() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Header reveal
+      // Header animation
       gsap.from('.certs-reveal', {
         opacity: 0,
         y: 36,
@@ -103,12 +103,19 @@ export default function Certificates() {
   }, [])
 
   return (
-    <section className="section-pad" id="certificates" ref={ref}>
+    <section
+      className="section-pad"
+      id="certificates"
+      ref={ref}
+    >
       <div className="container-app">
+
+        {/* Section Label */}
         <span className="eyebrow certs-reveal">
           Credentials
         </span>
 
+        {/* Section Heading */}
         <h2 className="section-title certs-reveal">
           <AnimatedText
             as="span"
@@ -118,31 +125,40 @@ export default function Certificates() {
           />
         </h2>
 
+        {/* Section Description */}
         <p className="section-sub certs-reveal">
           Verified courses I've completed to keep my skills sharp and up to
           date. Click any certificate to view it.
         </p>
 
-        {/* Horizontal Slider */}
+        {/* =====================================
+            HORIZONTAL CERTIFICATE SLIDER
+        ====================================== */}
+
         <div
           ref={sliderRef}
           className="certificates-slider"
         >
-          {certificates.map((c) => (
+          {certificates.map((certificate) => (
             <div
-              key={c.title}
-              className="cert-card certificates-slide"
+              key={certificate.title}
+              className="certificates-slide"
             >
-              <CertificateCard
-                cert={c}
-                onView={() => setActiveCert(c)}
-              />
+              <div className="cert-card">
+                <CertificateCard
+                  cert={certificate}
+                  onView={() => setActiveCert(certificate)}
+                />
+              </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Certificate popup */}
+      {/* =====================================
+          PDF MODAL
+      ====================================== */}
+
       <PdfModal
         open={!!activeCert}
         onClose={() => setActiveCert(null)}
